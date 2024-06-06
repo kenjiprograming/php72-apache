@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  # php-apache
+  web:
+    build: ./.docker/web
+    ports:
+      - "80:80"
+    user: "1000:1000"
+    volumes:
+      - ./www:/var/www
